@@ -12,7 +12,7 @@
         pkgs = import nixpkgs {
           inherit system;
         };
-      in {
+      in rec {
         packages.default = pkgs.stdenv.mkDerivation rec {
           name = "mesonlsp";
           version = "4.2.2";
@@ -99,6 +99,10 @@
           mesonFlags = [
             "-Duse_own_tree_sitter=false"
           ];
+        };
+
+        overlay.default = final: prev: {
+          mesonlsp = packages.default;
         };
       }
     );
