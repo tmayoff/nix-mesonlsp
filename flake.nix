@@ -1,5 +1,5 @@
 {
-  description = "Flake utils demo";
+  description = "A flake for building mesonlsp";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   outputs = {
