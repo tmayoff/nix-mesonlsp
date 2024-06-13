@@ -17,3 +17,4 @@ jobs:
         with:
           name: "tmayoff/nix-mesonlsp"
           rolling: true
+          visibility: public
